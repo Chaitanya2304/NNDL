@@ -1,0 +1,97 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPWqx+Abi3zvNFKkESXUuGI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Chaitanya2304/NNDL/blob/main/ASSIGNMENT-2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 128
+        },
+        "id": "QXfDJHExgPp0",
+        "outputId": "f3a032a5-bf55-4604-b853-aebeb64aa540"
+      },
+      "source": [
+        "In [1]:\n",
+        "#Initializing Variables\n",
+        "#Let us Consider f(x,y)=x*2+y*2+10\n",
+        "x=-1\n",
+        "y=2\n",
+        "epochs=1000\n",
+        "n=0.01\n",
+        "In [2]:\n",
+        "#derivative w.r.t x\n",
+        "def der_x(x):\n",
+        "  val=2*x\n",
+        "  return val\n",
+        "In [3]:\n",
+        "#derivative w.r.t y\n",
+        "def der_y(y):\n",
+        "  val=2*y\n",
+        "  return val\n",
+        "In [4]:\n",
+        "iter=1\n",
+        "In [5]:\n",
+        "while (iter<=epochs):\n",
+        "  df_x=der_x(x)\n",
+        "  df_y=der_y(y)\n",
+        " \n",
+        "  x1=(-1)*n*df_x\n",
+        "  y1=(-1)*n*df_y\n",
+        " \n",
+        "  x=x+x1\n",
+        "  y=y+y1\n",
+        " \n",
+        "  iter=iter+1\n",
+        "In [6]:\n",
+        "print(str(x)+\"\\n\"+str(y))\n",
+        "-1.6829673572159529e-09\n",
+        "3.3659347144319058e-09\n",
+        "In [7]:\n",
+        "def f(x,y):\n",
+        "  val=(x*2+y*2+10)\n",
+        "  return val\n",
+        "In [8]:\n",
+        "print(\"Global Minimum Value of f(x,y)=\"+str(f(x,y))+\" at (x,y)=(\"+str(x)+\",\"+str(y)+\")\")\n",
+        "Global Minimum Value of f(x,y)=10.0 at (x,y)=(-1.6829673572159529e-09,3.3659347144319058e-09)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-1-ad54ab612938>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    In [1]:\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
